@@ -1,26 +1,21 @@
-# conference_fastapi
-веб приложение “Конференция”
+# Веб приложение “Конференция”
 
 FastAPI проект с подключением к PostgreSQL через SQLAlchemy и миграциями Alembic. Этот проект развернут с помощью Docker и Poetry.
 
 ## Требования
 
-Перед запуском убедитесь, что на вашем компьютере установлены:
-
-- [Docker](https://www.docker.com/)
-- [Poetry](https://python-poetry.org/)
+Перед запуском убедитесь, что на вашем компьютере установлен [Docker](https://www.docker.com/)
 
 ## Установка
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-логин/conf1.git
-   cd conf1
+   git clone https://github.com/IvanC0tleta/conference_fastapi.git
    ```
    
-2. Создайте файл .env и заполните переменные окружения:
+2. В файле .env заполните переменные окружения.
 
-3. Убедитесь, что Docker работает на вашем компьютере.
+3. Убедитесь, что Docker запущен на вашем компьютере.
 
 ## Запуск приложения с Docker
 1. Соберите и запустите приложение через Docker Compose:
