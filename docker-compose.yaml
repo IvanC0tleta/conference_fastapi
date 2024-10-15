@@ -1,0 +1,30 @@
+services:
+  migrate:
+    build: .
+    command: poetry run alembic upgrade head
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  app:
+    build: .
+    command: poetry run uvicorn app.main:app --host 0.0.0.0 --port ${APP_HOST_PORT}
+    volumes:
+      - .:/app
+    ports:
+      - "${APP_HOST_PORT}:${APP_HOST_PORT}"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_DB_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB_NAME}
+    ports:
+      - "${POSTGRES_DB_PORT}:${POSTGRES_DB_PORT}"

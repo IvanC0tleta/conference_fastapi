@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "conf1"
+version = "0.1.0"
+description = ""
+authors = ["Иван Счастливых <passred748@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.115.2"}
+sqlalchemy = "^2.0.35"
+psycopg2 = "^2.9.9"
+alembic = "^1.13.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

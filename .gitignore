@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.eggs/
+*.log
+
+# Poetry
+poetry.lock
+.cache/
+
+# PyCharm/IDE
+.idea/
+
+# Docker
+docker-compose.override.yml
+
+# Alembic
+alembic/versions/__pycache__/
+alembic/versions/*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
