@@ -9,7 +9,6 @@ __pycache__/
 *.log
 
 # Poetry
-poetry.lock
 .cache/
 
 # PyCharm/IDE
